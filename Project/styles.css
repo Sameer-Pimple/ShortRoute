@@ -35,14 +35,12 @@ nav ul{
     float: right;
     overflow: auto;
     margin-right: 20px;
-    left: 100%;
-    
+    left: 100%;   
 }
 
 nav ul li {
     list-style: none;
     display: inline-block;
-    
     padding-left: 10px;
     padding-right: 10px;
     line-height: 80px;
@@ -105,23 +103,28 @@ a.active, a:hover{
     }
     ul{
         position: fixed;
-        width: 100%;
-        height: 100vh;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.212);
+        margin-left: 45%;
+        width: 50%;
+        align-items: center;
+        height: 50vh;
         left: -100%;
-        background-color: transparent;
-        top: 90px;
+        background-color:rgba(255, 255, 255, 0.122); 
+        backdrop-filter: blur(10px);
+        top: 85px;
         text-align: center;
         transition: all .5s;
     }
     nav ul li{
         display: block;
+        line-height: 70px;
     }
     nav ul li a {
-        font-size: 20px;
+        font-size: 15px;
     }
     #check:checked ~ul{
         left: 0;
-
     }
 
 }
