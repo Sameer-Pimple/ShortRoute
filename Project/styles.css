@@ -7,7 +7,7 @@
     
 }
 .container{
-    background-image: url(Blue\ Page.png);
+    background-image:url(BluePage.png);
     height: 100vh;
     width: 100%;
     background-size:cover;
@@ -79,6 +79,20 @@ a.active, a:hover{
 #check{
     display: none;
 }
+#globe {
+    position: fixed;
+    top: 80px;
+    display:flex;
+    left: 10px;
+    /* z-index: 0; */
+}
+
+
+/* .Earth{
+    height: ;
+    z-index: ;
+    width: ;
+} */
 
 @media(max-width: 990px){
     nav ul li a {
@@ -118,6 +132,7 @@ a.active, a:hover{
         top: 85px;
         text-align: center;
         transition: all .5s;
+        z-index: 5;
     }
     nav ul li{
         display: block;
@@ -126,6 +141,15 @@ a.active, a:hover{
     }
     nav ul li a {
         font-size: 15px;
+    }
+
+    #globe {
+        position: fixed;
+        width:30%;
+        height: 50vh;
+        top: 90px;
+        display:flex;
+        left: 10px;
     }
     
     #check:checked ~ul{
