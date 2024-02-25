@@ -26,12 +26,13 @@ function onDocumentMouseUp( event ) {
     document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
 }
 
-function main() {
+function main() 
+{
     const scene = new THREE.Scene();
 
     // Create a WebGLRenderer with alpha set to true
     const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#globe'), alpha: true });
-    renderer.setSize(850, 800);
+    renderer.setSize(800, 500);
 
     // Set the CSS background of the container to transparent
     renderer.domElement.style.background = 'transparent';
@@ -81,18 +82,21 @@ function main() {
     camera.position.z = 1.7;
 
     const render = () => {
-        // Rotate Earth and cloud
-        earthMesh.rotation.x += 0.001;
-        cloudMesh.rotation.x += 0.001;
-        renderer.render(scene, camera);
+        earthMesh.rotateY(0.001); // Rotating the Earth slowly from left to right
+    cloudMesh.rotateY(0.001); // Rotating the cloud layer along with the Earth
+        earthMesh.rotateOnWorldAxis(new THREE.Vector3(0, 1, 0), targetRotationX);
+        earthMesh.rotateOnWorldAxis(new THREE.Vector3(1, 0, 0), targetRotationY);
+        cloudMesh.rotateOnWorldAxis(new THREE.Vector3(0, 1, 0), targetRotationX);
+        cloudMesh.rotateOnWorldAxis(new THREE.Vector3(1, 0, 0), targetRotationY);
+        targetRotationY = targetRotationY * slowingFactor;
+        targetRotationX = targetRotationX * slowingFactor;
+        renderer.render(scene,camera);
     }
-
-    const animate = () => {
+    const animate = () =>{
         requestAnimationFrame(animate);
         render();
     }
-
     animate();
+    document.addEventListener('mousedown', onDocumentMouseDown, false );
 }
-
 window.onload = main;
