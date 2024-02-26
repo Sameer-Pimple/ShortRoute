@@ -32,7 +32,7 @@ function main()
 
     // Create a WebGLRenderer with alpha set to true
     const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#globe'), alpha: true });
-    renderer.setSize(800, 500);
+    renderer.setSize(600, 500);
 
     // Set the CSS background of the container to transparent
     renderer.domElement.style.background = 'transparent';
