@@ -54,11 +54,6 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* li:hover{
-    scale: 10px;
-
-} */
-
 a.active, a:hover{
     border-bottom: 2px solid rgb(255, 166, 0);
     padding-bottom: 5px;
@@ -79,13 +74,7 @@ a.active, a:hover{
 #check{
     display: none;
 }
-#globe {
-    position: fixed;
-    top: 20vh;
-    display:flex;
-    
-    /* z-index: 0; */
-}
+
 
 @media(max-width: 990px){
     nav ul li a {
@@ -136,12 +125,6 @@ a.active, a:hover{
         font-size: 15px;
     }
 
-    #globe {
-        position: fixed;
-        top:80px;
-        display:none;
-        left: 0px;
-    }
     
     #check:checked ~ul{
         left: 0;
