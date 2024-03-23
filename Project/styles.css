@@ -12,6 +12,7 @@
     width: 100%;
     background-size:cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 header{
@@ -85,14 +86,10 @@ form{
     margin-right: 20px;
     width: 600px;
     border: 1px solid wheat;
-    align-items: center;
-    align-content: center;
-    backdrop-filter:blur(10px);
+    border-radius: 10px;
+    backdrop-filter:blur(5px);
 }
-.DLocations{
-    align-items: center;
-    align-content: center;
-}
+
 
 .DLocations input{
     display: block;
