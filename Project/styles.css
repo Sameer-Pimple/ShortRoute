@@ -81,15 +81,38 @@ nav ul li a.active, a:hover{
 }
 
 form{
-    float: right;
-    margin-top: 10px;
-    margin-right: 20px;
-    width: 600px;
-    border: 1px solid wheat;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.887);
+    float: left;
+    margin-top: 20px;
+    margin-left: 2rem;
+    width: 250px;
+    border: 1px solid rgb(61, 207, 230);
     border-radius: 10px;
     backdrop-filter:blur(5px);
+    padding: 1rem;
+    align-items:initial
 }
 
+button{
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid wheat;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-transform: uppercase;
+}
+
+.DLocations{
+    align-items: center;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.DLocations h1{
+    font-size:30px;
+}
 
 .DLocations input{
     display: block;
@@ -97,6 +120,18 @@ form{
     text-align: center;
     text-transform: uppercase;
     border-radius: 5px;
+    border: 1px solid wheat;
+}
+
+.Controls{
+    text-transform: uppercase;
+    display: grid;
+}
+
+.Controls button{
+    border: 0cap;
+    background-color: rgb(67, 154, 225);
+    color: rgb(255, 255, 255);
 }
 
  

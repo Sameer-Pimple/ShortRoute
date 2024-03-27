@@ -31,21 +31,24 @@
         
             <form action="process.php" method="post">
                 <div class="DLocations">
+                    <h1>Add New Delivery Location</h1>
+                    <button type="button">Get Current Location</button>
                  <input type="text" name="Location1" id="Locations" placeholder="Enter Location">
                  <input type="text" name="Location2" id="Locations" placeholder="Enter Location">
                  <input type="text" name="Location3" id="Locations" placeholder="Enter Location">
                  <input type="text" name="Location4" id="Locations" placeholder="Enter Location">
                 </div>
                 <div class="Controls">
-                    <a href="#" id="Add_more">Add More Field</a>
-                    <a href="#" id="Remove">Remove Field</a>
+                    <button type="button">Add more locations</button>
+                    <button type="button">remove</button>
+                </div>
+                <div class="Map">
+                    <!-- We Have to Add Our API Key Here For Display Map -->
                 </div>
             </form>
         
 
     </div>
-
     <script src="script.js"></script>
-    <script sr="FormScript.js"></script>
 </body>
 </html>
