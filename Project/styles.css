@@ -7,7 +7,7 @@
     
 }
 .container{
-    background-image:url(ShortLRouteBGI.jpg);
+    /* background-image:url(ShortLRouteBGI.jpg); */
     height: 100vh;
     width: 100%;
     background-size:cover;
@@ -16,9 +16,9 @@
 }
 
 header{
-    /* background-color: aqua; */
+    background-color: rgb(158, 246, 246); 
     height: 80px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+    border-bottom: 1px solid rgba(4, 3, 3, 0.34);
 
 }
 
