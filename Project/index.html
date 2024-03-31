@@ -29,23 +29,32 @@
             </header>
         </div>
         
+        <div class="LocForm">
+            <h1>Add Delivery Locations</h1>
+            <div class="currentLoc">
+                <button class="Location">Detect Current Location</button>
+            </div>
             <form action="process.php" method="post">
-                <div class="DLocations">
-                    <h1>Add New Delivery Location</h1>
-                    <button type="button">Get Current Location</button>
-                 <input type="text" name="Location1" id="Locations" placeholder="Enter Location">
-                 <input type="text" name="Location2" id="Locations" placeholder="Enter Location">
-                 <input type="text" name="Location3" id="Locations" placeholder="Enter Location">
-                 <input type="text" name="Location4" id="Locations" placeholder="Enter Location">
-                </div>
-                <div class="Controls">
-                    <button type="button">Add more locations</button>
-                    <button type="button">remove</button>
-                </div>
+                <div id="formfield">
+                    <input type="text" name="location" placeholder="Enter Location" class="location">
+                    <input type="text" name="location" placeholder="Enter Location" class="location">
+                    <input type="text" name="location" placeholder="Enter Location" class="location">
+                    <input type="text" name="location" placeholder="Enter Location" class="location">
+		            <input type="submit"  name="submit" value="Submit">
+		        </div>
+            </form>
+            
+	        <div class="controls">
+                <button class="add" onclick="add()">Add More</button>
+                <button class="remove" onclick="remove()">Remove</button>
+            </div>
+        </div>
+
+
                 <div class="Map">
                     <!-- We Have to Add Our API Key Here For Display Map -->
                 </div>
-            </form>
+            
         
 
     </div>
