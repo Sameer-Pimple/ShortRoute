@@ -34,15 +34,15 @@
             <div class="currentLoc">
                 <button class="Location">Detect Current Location</button>
             </div>
-            <form action="process.php" method="post">
+            <form action="process.php" method="POST">
                 <div id="formfield">
-                    <input type="text" name="location" placeholder="Enter Location" class="location">
-                    <input type="text" name="location" placeholder="Enter Location" class="location">
-                    <input type="text" name="location" placeholder="Enter Location" class="location">
-                    <input type="text" name="location" placeholder="Enter Location" class="location">
-		            <input type="submit"  name="submit" value="Submit">
-		        </div>
-            </form>
+                    <input type="text" name="location" class="location" placeholder="Enter Location" required >
+                    <input type="text" name="location" class="location" placeholder="Enter Location" >
+                    <input type="text" name="location" class="location" placeholder="Enter Location" >
+                    <input type="text" name="location" class="location" placeholder="Enter Location" >
+                </div>
+                <input type="submit"  name="submit" value="Submit">
+           </form>
             
 	        <div class="controls">
                 <button class="add" onclick="add()">Add More</button>
@@ -58,6 +58,7 @@
         
 
     </div>
+    <script src="Dynamic-form.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

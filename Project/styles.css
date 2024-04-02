@@ -113,6 +113,11 @@ nav ul li a.active, a:hover{
  transition: 0.5s;
 }
 
+#formfield{
+    max-height: 45vh;
+    overflow-y: scroll;
+}
+
 .LocForm h1{
     text-align: center;
     text-transform: uppercase;
@@ -170,6 +175,7 @@ nav ul li a.active, a:hover{
     border-radius: 25px;
     background-color: white;
     color: rgb(54, 54, 236);
+    border: 1px solid;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight:500;
@@ -183,6 +189,7 @@ nav ul li a.active, a:hover{
     border-radius: 25px;
     background-color: white;
     color: rgb(54, 54, 236);
+    border: 1px solid;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight:500;
@@ -191,6 +198,7 @@ nav ul li a.active, a:hover{
 .LocForm .add:hover, .LocForm .remove:hover{
     color: white;
     background-color: rgb(54, 54, 236);
+    border: 1px solid;
     transition: .5s;
 }
 
