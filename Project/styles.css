@@ -15,11 +15,12 @@
     background-position: center;
 }
 
+
+/* NAVIGATION BAR CSS */
 header{
     background-color: rgb(158, 246, 246); 
     height: 80px;
     border-bottom: 1px solid rgba(4, 3, 3, 0.34);
-
 }
 
 .Logo{
@@ -80,9 +81,9 @@ nav ul li a.active, a:hover{
     display: none;
 }
  
-
+/* Location form CSS*/
 .LocForm{
-    width: 500px;
+    width: 600px;
     padding: 10px;
     margin: 30px auto;
     margin-left: 20px;
@@ -202,6 +203,17 @@ nav ul li a.active, a:hover{
     transition: .5s;
 }
 
+/*****************Map css******/
+#map {
+    top: 30px;
+    margin-right: 20px;
+    height: 575px;
+    width: 800px;
+    float: right;
+    box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
+    border-radius: 5px;
+}
+
 /* Setting properties for window width 990px*/
 @media(max-width: 990px){
     nav ul li a {
@@ -219,6 +231,8 @@ nav ul li a.active, a:hover{
         padding-top: 10px;
         padding-bottom: 5px;
     }
+
+    /* Location form CSS*/
     .parent{
         display: flex;
         margin: 20px auto;
@@ -242,6 +256,7 @@ nav ul li a {
         transition: all 0.5s;
     }
 
+    /* Location form CSS*/
     .parent{
         display: flex;
         margin: 20px auto;
@@ -309,6 +324,7 @@ nav ul li a {
         transform: rotate(-225deg);
     }
 
+    /* Location form CSS*/
     .parent{
         display: flex;
         margin: 20px auto;
