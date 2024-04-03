@@ -89,6 +89,7 @@ nav ul li a.active, a:hover{
     float: left;
     box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
     border-radius: 5px;
+    transition: 0.5s;
 }
 
   .LocForm .Location{
@@ -121,9 +122,8 @@ nav ul li a.active, a:hover{
 .LocForm h1{
     text-align: center;
     text-transform: uppercase;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Poppins", sans-serif;    
     letter-spacing: 2px;
-    font-weight: lighter;
     color: rgb(34, 91, 91);
     padding-bottom: 10px;
 }
@@ -135,7 +135,7 @@ nav ul li a.active, a:hover{
     width: 300px;
     border: none;
     background-color: rgba(128, 128, 128, 0.133);
-    border-radius: 10px;
+    border-radius: 25px;
     text-align: center;
     font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -219,6 +219,20 @@ nav ul li a.active, a:hover{
         padding-top: 10px;
         padding-bottom: 5px;
     }
+    .parent{
+        display: flex;
+        margin: 20px auto;
+    }
+
+    .LocForm{
+        width: 350px;
+        /* padding: 10px;*/
+        float: left;
+        box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    
 }
 
 @media(max-width: 840px){
@@ -226,6 +240,21 @@ nav ul li a {
         margin-right: 0px;
         font-size: 14px;
         transition: all 0.5s;
+    }
+
+    .parent{
+        display: flex;
+        margin: 20px auto;
+    }
+
+    .LocForm{
+        width: 500px;
+        /* padding: 10px;*/
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
+        border-radius: 5px;
+        transition: 0.5s;
     }
 }
 
@@ -250,12 +279,13 @@ nav ul li a {
     ul{
         position: fixed;
         border: 1px solid rgba(255, 255, 255, 0.212);
+        border: 0.5px solid grey;
         border-radius: 20px;
         margin-left: 45%;
         width: 50%;
         align-items: center;
         left: -100%;
-        background-color:rgba(255, 255, 255, 0.122); 
+        background-color:rgba(255, 255, 255, 0.507); 
         backdrop-filter: blur(10px);
         top: 85px;
         text-align: center;
@@ -269,6 +299,7 @@ nav ul li a {
     }
     nav ul li a {
         font-size: 15px;
+        font-weight: 500;
     }
 
     #check:checked ~ul{
@@ -278,4 +309,55 @@ nav ul li a {
         transform: rotate(-225deg);
     }
 
+    .parent{
+        display: flex;
+        margin: 20px auto;
+    }
+
+    .LocForm{
+        width: 300px;
+        /* padding: 10px;*/
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    .LocForm .Location{
+        margin: 10px auto;
+        display: block;
+        width: 250px;
+        
+    }
+
+    .LocForm h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .LocForm input[type="text"]{
+        width: 250px;
+        font-family: "Poppins", sans-serif;    
+    }
+    
+    .LocForm input[type="submit"]{
+        width: 250px;
+    }
+
+    .LocForm .add{
+        font-size: 14px;
+    }
+
+    .LocForm .remove{
+        font-size: 14px;
+    }
 }
+
+
+/* @media(max-width: 500px){
+    .LocForm{
+        display: block;
+        margin: 20px auto;
+        justify-content: center;
+    }
+} */

@@ -29,24 +29,26 @@
             </header>
         </div>
         
-        <div class="LocForm">
-            <h1>Add Delivery Locations</h1>
-            <div class="currentLoc">
-                <button class="Location">Detect Current Location</button>
-            </div>
-            <form action="process.php" method="POST">
-                <div id="formfield">
-                    <input type="text" name="location" class="location" placeholder="Enter Location" required >
-                    <input type="text" name="location" class="location" placeholder="Enter Location" >
-                    <input type="text" name="location" class="location" placeholder="Enter Location" >
-                    <input type="text" name="location" class="location" placeholder="Enter Location" >
+        <div class="parent">
+            <div class="LocForm">
+                <h1>Add Delivery Locations</h1>
+                <div class="currentLoc">
+                    <button class="Location">Detect Current Location</button>
                 </div>
-                <input type="submit"  name="submit" value="Submit">
-           </form>
-            
-	        <div class="controls">
-                <button class="add" onclick="add()">Add More</button>
-                <button class="remove" onclick="remove()">Remove</button>
+                <form action="process.php" method="POST">
+                    <div id="formfield">
+                        <input type="text" name="location" class="location" placeholder="Enter Location" required >
+                        <input type="text" name="location" class="location" placeholder="Enter Location" >
+                        <input type="text" name="location" class="location" placeholder="Enter Location" >
+                        <input type="text" name="location" class="location" placeholder="Enter Location" >
+                    </div>
+                    <input type="submit"  name="submit" value="Submit">
+               </form>
+                
+                <div class="controls">
+                    <button class="add" onclick="add()">Add More</button>
+                    <button class="remove" onclick="remove()">Remove</button>
+                </div>
             </div>
         </div>
 
