@@ -84,6 +84,7 @@ nav ul li a.active, a:hover{
 /* Location form CSS*/
 .LocForm{
     width: 600px;
+    /* height: 725px; */
     padding: 10px;
     margin: 30px auto;
     margin-left: 20px;
@@ -116,6 +117,7 @@ nav ul li a.active, a:hover{
 }
 
 #formfield{
+    height: 700px;
     max-height: 45vh;
     overflow-y: scroll;
 }
@@ -207,8 +209,8 @@ nav ul li a.active, a:hover{
 #map {
     top: 30px;
     margin-right: 20px;
-    height: 575px;
-    width: 800px;
+    height: 700px;
+    width: 1000px;
     float: right;
     box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
     border-radius: 5px;
