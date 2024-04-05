@@ -33,7 +33,7 @@
             <div class="LocForm">
                 <h1>Add Delivery Locations</h1>
                 <div class="currentLoc">
-                    <button class="Location">Detect Current Location</button>
+                    <button class="Location" onclick="getLocation()">Detect Current Location</button>
                 </div>
                 <form action="process.php" method="POST">
                     <div id="formfield">
@@ -56,7 +56,10 @@
                 </div>
     </div>
     <script src="Dynamic-form.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEOEnw8Pa_boUhT_QHCOsZi34yNt3WwEw&callback=initMap"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEOEnw8Pa_boUhT_QHCOsZi34yNt3WwEw&loading=async&callback=initMap">
+    </script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEOEnw8Pa_boUhT_QHCOsZi34yNt3WwEw&callback=initMap"></script> -->
     <script src="map.js"></script>
     <script src="script.js"></script>
 </body>
