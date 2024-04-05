@@ -1,5 +1,6 @@
 let directionsService, directionsRenderer, map;
-let currentLocationMarker, Circle; // Declare a variable to hold the current location marker
+let currentLocationMarker, Circle;
+let sourceAutocomplete, desAutocomplte;// Declare a variable to hold the current location marker
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -9,6 +10,13 @@ function initMap() {
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
+
+    sourceAutocomplete = new google.maps.places.Autocomplete(
+        document.getElementById('source')
+    )
+    desAutocomplte = new google.maps.places.Autocomplete(
+        document.getElementById('dest')
+    )
 
     document.getElementById('map-form').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -63,8 +71,6 @@ function showPosition(position) {
           });
         map.setCenter(myLatLng);
     }
- 
-
     // Set markerExists in localStorage to true to indicate the presence of the marker
     localStorage.setItem('markerExists', 'true');
 }
@@ -83,7 +89,7 @@ function calculateAndDisplayRoute() {
 
     const request = {
         origin: address1,
-        destination: address1, // Return to the starting point
+        destination: address2, // Return to the starting point
         waypoints: waypoints,
         optimizeWaypoints: true,
         travelMode: 'DRIVING'
@@ -97,5 +103,4 @@ function calculateAndDisplayRoute() {
         }
     });
 }
-
 window.initMap = initMap;

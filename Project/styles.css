@@ -144,11 +144,11 @@ nav ul li a.active, a:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.LocForm input[type="text"]:focus{
+.LocForm button[type="text"]:focus{
    outline: none;
 }
 
-.LocForm input[type="submit"]{
+.LocForm button[type="submit"]{
     margin: 10px auto;
     display: block;
     width: 300px;
@@ -163,7 +163,7 @@ nav ul li a.active, a:hover{
     background-color: rgb(54, 54, 236);
 }
 
-.LocForm input[type="submit"]:hover{
+.LocForm button[type="submit"]:hover{
     background-color: rgba(156, 219, 244, 0.556);
     color:  rgb(54, 54, 236);
     /* font-weight: bold; */
@@ -358,7 +358,7 @@ nav ul li a {
         font-family: "Poppins", sans-serif;    
     }
     
-    .LocForm input[type="submit"]{
+    .LocForm button[type="submit"]{
         width: 250px;
     }
 
