@@ -12,7 +12,7 @@ function add(){
 function remove(){
     let input_tags = formfield.getElementsByTagName('input');
 
-    if(input_tags.length >2){
+    if(input_tags.length >4){
         formfield.removeChild(input_tags[(input_tags.length)-1]);
     }
 }
