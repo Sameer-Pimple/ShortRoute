@@ -1,4 +1,5 @@
 let directionsService, directionsRenderer, map;
+let currentLocationMarker, Circle; // Declare a variable to hold the current location marker
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -9,19 +10,21 @@ function initMap() {
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
 
-    document.getElementById('map').addEventListener('submit', function (event) {
+    document.getElementById('map-form').addEventListener('submit', function (event) {
         event.preventDefault();
         calculateAndDisplayRoute();
     });
-    const markerExists = localStorage.getItem('markerExists');
 
+    document.getElementById('detect-location').addEventListener('click', function () {
+        // Call getLocation to initiate fetching user's location
+        getLocation();
+    });
+
+    // Check if the marker exists in localStorage and remove it if it does
+    const markerExists = localStorage.getItem('markerExists');
     if (markerExists === 'true') {
-        // Remove the marker
         currentLocationMarker.setMap(null);
     }
-
-    // Call getLocation to initiate fetching user's location
-    getLocation();
 }
 
 function getLocation() {
@@ -34,16 +37,36 @@ function getLocation() {
 
 function showPosition(position) {
     const myLatLng = { lat: position.coords.latitude, lng: position.coords.longitude };
-    const Lat= position.coords.latitude;
-    const long= position.coords.longitude;
-    const accuracy= position.coords.accuracy;
-    console.log(position.coords.latitude, position.coords.longitude, position.coords.accuracy);
 
-    const marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: "Your Position"
-    });
+    if (currentLocationMarker) {
+        // If marker exists, update its position
+        currentLocationMarker.setPosition(myLatLng);
+        map.setCenter(myLatLng);
+    } else {
+        // If marker doesn't exist, create a new one
+        currentLocationMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon:  "MarIcon1.png",
+            animation: google.maps.Animation.BOUNCE,
+            title: "Your Position"
+        });
+        Circle = new google.maps.Circle({
+            strokeColor: '#95cbfb',
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: '#95cbfb',
+            fillOpacity: 0.35,
+            map: map,
+            center: myLatLng,
+            radius: 150
+          });
+        map.setCenter(myLatLng);
+    }
+ 
+
+    // Set markerExists in localStorage to true to indicate the presence of the marker
+    localStorage.setItem('markerExists', 'true');
 }
 
 function calculateAndDisplayRoute() {
