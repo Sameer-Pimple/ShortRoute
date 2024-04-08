@@ -83,8 +83,10 @@ nav ul li a.active, a:hover{
  
 /* Location form CSS*/
 .LocForm{
-    width: 600px;
-    /* height: 725px; */
+    width: 42%;
+    min-width: 40%;
+    height: 75vh; 
+    /* min-height: 60vh; */
     padding: 10px;
     margin: 30px auto;
     margin-left: 20px;
@@ -106,6 +108,7 @@ nav ul li a.active, a:hover{
     font-size: 16px;
     font-weight:500;
     background-color: rgb(54, 54, 236);
+    transition: all .5s;
 }
 
 .LocForm .Location:hover{
@@ -113,13 +116,13 @@ nav ul li a.active, a:hover{
  color: blue;
  letter-spacing: 2px;
  border: 1px solid blue;
- transition: 0.5s;
 }
 
 #formfield{
-    height: 700px;
-    max-height: 45vh;
-    overflow-y: scroll;
+    height: 40vh;
+    min-height: 20vh;
+    position: none;
+    overflow-y: scroll; 
 }
 
 .LocForm h1{
@@ -161,6 +164,7 @@ nav ul li a.active, a:hover{
     font-weight:500;
     letter-spacing: 1px;
     background-color: rgb(54, 54, 236);
+    transition: all 0.5s;
 }
 
 .LocForm button[type="submit"]:hover{
@@ -168,7 +172,6 @@ nav ul li a.active, a:hover{
     color:  rgb(54, 54, 236);
     /* font-weight: bold; */
     letter-spacing: 5px;
-    transition: 0.5s;
 }
 
 .LocForm .add{
@@ -182,6 +185,7 @@ nav ul li a.active, a:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight:500;
+    transition:  all .5s;
 }
 
 .LocForm .remove{
@@ -196,6 +200,7 @@ nav ul li a.active, a:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight:500;
+    transition: all .5s;
 }
 
 .LocForm .add:hover, .LocForm .remove:hover{
@@ -209,8 +214,10 @@ nav ul li a.active, a:hover{
 #map {
     top: 30px;
     margin-right: 20px;
-    height: 75%;
-    width: 55%;
+    height: 75vh;
+    min-height: 60vh;
+    width: 50%;
+    min-width: 30%;
     float: right;
     box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
     border-radius: 5px;
@@ -247,6 +254,17 @@ nav ul li a.active, a:hover{
         box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
         border-radius: 5px;
         transition: 0.5s;
+    }
+
+    #map {
+        top: 30px;
+        margin-right: 20px;
+        height: 75vh;
+        width: 50%;
+        min-width: 30%;
+        float: right;
+        box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
+        border-radius: 5px;
     }
     
 }
