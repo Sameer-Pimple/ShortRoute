@@ -3,7 +3,8 @@ let currentLocationMarker, Circle;
 let input, autocomplete;// Declare a variable to hold the current location marker
 
 function initMapAndAutocomplete() {
-    initAutocomplete(),initMap();
+    initAutocomplete();
+    initMap();
   }
 
 function initMap() {
@@ -14,20 +15,7 @@ function initMap() {
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
-
-   
-   
-
-    document.getElementById('map-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        calculateAndDisplayRoute();
-    });
-
-    document.getElementById('detect-location').addEventListener('click', function () {
-        // Call getLocation to initiate fetching user's location
-        getLocation();
-    });
-
+    
     // Check if the marker exists in localStorage and remove it if it does
     const markerExists = localStorage.getItem('markerExists');
     if (markerExists === 'true') {
@@ -83,10 +71,11 @@ function showPosition(position) {
 }
 
 function calculateAndDisplayRoute() {
-    const address1 = document.getElementById('address1').value;
-    const address2 = document.getElementById('address2').value;
-    const address3 = document.getElementById('address3').value;
-    const address4 = document.getElementById('address4').value;
+    const location = position();
+    const address1 = document.getElementById('address1').value
+    const address2 = document.getElementById('address2').value
+    const address3 = document.getElementById('address3').value
+    const address4 = document.getElementById('address4').value
 
     const waypoints = [
         { location: address2, stopover: true },
@@ -95,8 +84,8 @@ function calculateAndDisplayRoute() {
     ];
 
     const request = {
-        origin: address1,
-        destination: address2, // Return to the starting point
+        origin: location,
+        destination: address1, // Return to the starting point
         waypoints: waypoints,
         optimizeWaypoints: true,
         travelMode: 'DRIVING'
