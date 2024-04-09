@@ -1,6 +1,10 @@
 let directionsService, directionsRenderer, map;
 let currentLocationMarker, Circle;
-let sourceAutocomplete, desAutocomplte;// Declare a variable to hold the current location marker
+let input, autocomplete;// Declare a variable to hold the current location marker
+
+function initMapAndAutocomplete() {
+    initAutocomplete(),initMap();
+  }
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -11,12 +15,8 @@ function initMap() {
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
 
-    sourceAutocomplete = new google.maps.places.Autocomplete(
-        document.getElementById('source')
-    )
-    desAutocomplte = new google.maps.places.Autocomplete(
-        document.getElementById('dest')
-    )
+   
+   
 
     document.getElementById('map-form').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -34,6 +34,13 @@ function initMap() {
         currentLocationMarker.setMap(null);
     }
 }
+function initAutocomplete() {
+    const inputBoxes = document.querySelectorAll('input[type="text"]');
+    inputBoxes.forEach(function(input) {
+        new google.maps.places.Autocomplete(input);
+    });
+}
+
 
 function getLocation() {
     if (navigator.geolocation) {
