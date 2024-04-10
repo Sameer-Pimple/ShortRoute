@@ -81,7 +81,7 @@ nav ul li a.active, a:hover{
     display: none;
 }
  
-/* Location form CSS*/
+/* *****Location form CSS*****/
 .LocForm{
     width: 42%;
     min-width: 40%;
@@ -121,7 +121,6 @@ nav ul li a.active, a:hover{
 #formfield{
     height: 40vh;
     min-height: 20vh;
-    position: none;
     overflow-y: scroll; 
 }
 
@@ -223,8 +222,18 @@ nav ul li a.active, a:hover{
     border-radius: 5px;
 }
 
+/* Search box in map */
+#SearchLocation
+{
+    z-index: 1;
+}
+
 /* Setting properties for window width 990px*/
 @media(max-width: 990px){
+    nav ul{
+        margin-right: 5px;
+    }
+
     nav ul li a {
         margin-right: 20px;
         font-size: 16px;
@@ -243,8 +252,8 @@ nav ul li a.active, a:hover{
 
     /* Location form CSS*/
     .parent{
-        display: flex;
-        margin: 20px auto;
+        display: block;
+        margin: 20px auto; 
     }
 
     .LocForm{
@@ -260,11 +269,18 @@ nav ul li a.active, a:hover{
         top: 30px;
         margin-right: 20px;
         height: 75vh;
+        min-height: 60vh;
         width: 50%;
         min-width: 30%;
         float: right;
         box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
         border-radius: 5px;
+    }
+
+    .LocForm .add, .LocForm .remove
+    {
+        position: relative;
+        bottom: 8px;
     }
     
 }
@@ -279,17 +295,41 @@ nav ul li a {
     /* Location form CSS*/
     .parent{
         display: flex;
-        margin: 20px auto;
+        margin: 30px auto;
     }
 
     .LocForm{
-        width: 500px;
+        width: 90%;
         /* padding: 10px;*/
         margin: 20px auto;
         display: block;
         box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
-        border-radius: 5px;
+        border-radius: 25px;
         transition: 0.5s;
+    }
+
+    #formfield
+    {
+        height: 42vh;
+        min-height: 30vh;
+    }
+
+    .LocForm .add, .LocForm .remove
+    {
+        position: relative;
+        bottom: 15px;
+    }
+
+    .container #map {
+        float: none;
+        position: relative;
+        display: block;
+        top: 50px;
+        bottom: 20px;
+        margin: 0px auto;
+        height: 40vh;
+        width: 90%;
+        min-width: 70%;
     }
 }
 
@@ -351,7 +391,7 @@ nav ul li a {
     }
 
     .LocForm{
-        width: 300px;
+        width: 80%;
         /* padding: 10px;*/
         margin: 20px auto;
         display: block;
@@ -380,14 +420,26 @@ nav ul li a {
         width: 250px;
     }
 
-    .LocForm .add{
+    .LocForm .add, .LocForm .remove{
+        margin-top: 40px;
         font-size: 14px;
     }
 
-    .LocForm .remove{
-        font-size: 14px;
+    .container #map {
+       float: none;
+        position: relative;
+        display: block;
+        top: 50px;
+        bottom: 20px;
+        margin: 0px auto;
+        height: 40vh;
+        width: 80%;
+        min-width: 70%;
     }
+    
 }
+
+
 
 
 /* @media(max-width: 500px){
