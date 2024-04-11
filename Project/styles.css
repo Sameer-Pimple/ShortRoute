@@ -84,8 +84,8 @@ nav ul li a.active, nav ul li a:hover{
 /* *****Location form CSS*****/
 .LocForm{
     width: 42%;
-    min-width: 40%;
-    height: 75vh; 
+    min-width: 35%;
+    height: 71vh; 
     /* min-height: 60vh; */
     padding: 10px;
     margin: 30px auto;
@@ -213,9 +213,9 @@ nav ul li a.active, nav ul li a:hover{
 #map {
     top: 30px;
     margin-right: 20px;
-    height: 75vh;
+    height: 71vh;
     min-height: 60vh;
-    width: 50%;
+    width: 53%;
     min-width: 30%;
     float: right;
     box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
@@ -265,6 +265,8 @@ nav ul li a.active, nav ul li a:hover{
 .bottomBar a{
     text-decoration: none;
     font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 2px;
     transition: .5s ease-in-out;
 }
@@ -318,13 +320,17 @@ nav ul li a.active, nav ul li a:hover{
         border-radius: 5px;
         transition: 0.5s;
     }
+    #formfield{
+        height: 38vh;
+        min-height: 20vh;
+    }
 
     #map {
         top: 30px;
         margin-right: 20px;
-        height: 75vh;
+        height: 71vh;
         min-height: 60vh;
-        width: 50%;
+        width: 53%;
         min-width: 30%;
         float: right;
         box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
