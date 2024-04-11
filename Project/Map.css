@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+.container{
+    /* background-image:url(Assets/ShortLRouteBGI.jpg); */
+    height: 100vh;
+    width: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* NAVIGATION BAR CSS */
+header{
+    background-color: rgb(158, 246, 246); 
+    height: 80px;
+    border-bottom: 1px solid rgba(4, 3, 3, 0.34);
+}
+
+.Logo{
+    max-width: 500px;
+    height: 80px;
+    float: left;
+    display: block;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: all 0.5s;
+}
+
+nav ul{
+    float: right;
+    overflow: auto;
+    margin-right: 5px;
+    left: 100%;   
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 80px;
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(13, 109, 144);
+    font-weight:500;
+    font-size: 16px;
+    margin-right: 40px;
+    transition: all 0.5s;
+}
+
+nav ul li a.active, nav ul li a:hover{
+    border-bottom: 2px solid rgb(255, 166, 0);
+    padding-bottom: 5px;
+    border-radius: 80%;
+    transition: 0.3s;
+}
+
+.checkbtn{
+    font-size: 15px;
+    color: white;
+    line-height: 80px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/*****************Map css******/
+#map {
+    top: 30px;
+    margin: 0 auto;
+    height: 71vh;
+    min-height: 60vh;
+    width: 95%;
+    min-width: 30%;
+    
+    box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
+    border-radius: 5px;
+}
+
+/* This is the footer section */
+#FooterSection{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    width: 100%;
+    margin: 0 auto;
+    height: 10%;
+    z-index: 0;
+    border-top:1px solid rgba(0, 0, 0, 0.082);
+    background-color: #ace4f4;
+}
+
+.social{
+    margin: 0px auto;
+    text-align: center;
+    font-size: 14px;
+}
+.social p{
+    display: inline;
+}
+
+.social ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.social ul li a i{
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.social ul li a i:hover{
+    color: white;
+}
+
+.bottomBar{
+    text-align: center;
+}
+.bottomBar a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .5s ease-in-out;
+}
+
+.bottomBar a:hover{
+    letter-spacing: 5px;
+}
+.bottomBar p {
+    font-size: 14px;
+   
+}
+
+@media(max-width: 990px){
+    nav ul{
+        margin-right: 5px;
+    }
+
+    nav ul li a {
+        margin-right: 20px;
+        font-size: 16px;
+        transition: all 0.5s;
+    }
+
+    .Logo{
+        max-width: 295px;
+        height: 79px;
+        float: left;
+        display: block;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+}
+
+@media(max-width: 840px){
+    nav ul li a {
+            margin-right: 0px;
+            font-size: 14px;
+            transition: all 0.5s;
+        }
+    }    
+
+
+    @media(max-width: 695px){
+        .Logo{
+            align-items: center;
+            align-content: center;
+            margin: 0;
+            display: inline-block;
+            justify-content: center;
+            position: absolute;
+        }
+        .checkbtn{
+            display: block;
+            margin-right: 20px;
+            line-height: 0;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            font-size: 30px;
+            transition: .5s;
+        }
+        ul{
+            position: fixed;
+            border: 1px solid rgba(255, 255, 255, 0.212);
+            border: 0.5px solid grey;
+            border-radius: 20px;
+            margin-left: 45%;
+            width: 50%;
+            align-items: center;
+            left: -100%;
+            background-color:rgba(255, 255, 255, 0.507); 
+            backdrop-filter: blur(10px);
+            top: 85px;
+            text-align: center;
+            transition: all .5s;
+            z-index: 5;
+        }
+        nav ul li{
+            display: block;
+            line-height: 75px;
+            
+        }
+        nav ul li a {
+            font-size: 15px;
+            font-weight: 500;
+        }
+    
+        #check:checked ~ul{
+            left: 0;
+        }
+        #check:checked~.checkbtn{
+            transform: rotate(-225deg);
+        }
+
+        #map{
+          
+        }
+        #FooterSection{
+            position: fixed;
+            height: 80px;
+            padding-bottom: 0;
+        }
+    }    
