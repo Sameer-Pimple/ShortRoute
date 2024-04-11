@@ -60,7 +60,7 @@ nav ul li a {
     transition: all 0.5s;
 }
 
-nav ul li a.active, a:hover{
+nav ul li a.active, nav ul li a:hover{
     border-bottom: 2px solid rgb(255, 166, 0);
     padding-bottom: 5px;
     border-radius: 80%;
@@ -222,6 +222,60 @@ nav ul li a.active, a:hover{
     border-radius: 5px;
 }
 
+ #FooterSection{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    width: 100%;
+    margin: 0 auto;
+    height: 10%;
+    z-index: 0;
+    border-top:1px solid rgba(0, 0, 0, 0.082);
+    background-color: #ace4f4;
+}
+
+.social{
+    margin: 0px auto;
+    text-align: center;
+    font-size: 14px;
+}
+.social p{
+    display: inline;
+}
+
+.social ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.social ul li a i{
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.social ul li a i:hover{
+    color: white;
+}
+
+.bottomBar{
+    text-align: center;
+}
+.bottomBar a{
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: .5s ease-in-out;
+}
+
+.bottomBar a:hover{
+    letter-spacing: 5px;
+}
+.bottomBar p {
+    font-size: 14px;
+   
+}
 /* Search box in map */
 #SearchLocation
 {
@@ -330,6 +384,18 @@ nav ul li a {
         height: 40vh;
         width: 90%;
         min-width: 70%;
+    }
+    #FooterSection{
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 20vh;
+        width: 100%;
+        margin: 0px auto;
+        height: 10%;
+        z-index: 0;
+        border-top:1px solid rgba(0, 0, 0, 0.082);
+        background-color: #ace4f4;
     }
 }
 
