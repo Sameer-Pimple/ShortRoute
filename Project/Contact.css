@@ -34,7 +34,7 @@ header{
     transition: all 0.5s;
 }
 
-nav ul{
+header nav ul{
     float: right;
     overflow: auto;
     margin-right: 5px;
@@ -81,18 +81,7 @@ nav ul li a.active, nav ul li a:hover{
     display: none;
 }
 
-/*****************Map css******/
-#map {
-    top: 30px;
-    margin: 0 auto;
-    height: 71vh;
-    min-height: 60vh;
-    width: 95%;
-    min-width: 30%;
-    
-    box-shadow: 0px 0px 10px 0px rgb(25, 21, 21);
-    border-radius: 5px;
-}
+
 
 /* This is the footer section */
 #FooterSection{
@@ -102,7 +91,7 @@ nav ul li a.active, nav ul li a:hover{
     bottom:0;
     width: 100%;
     margin: 0 auto;
-    height: 10%;
+   
     z-index: 0;
     border-top:1px solid rgba(0, 0, 0, 0.082);
     background-color: #ace4f4;
@@ -201,7 +190,7 @@ nav ul li a.active, nav ul li a:hover{
             font-size: 30px;
             transition: .5s;
         }
-      header nav ul{
+        header nav ul{
             position: fixed;
             border: 1px solid rgba(255, 255, 255, 0.212);
             border: 0.5px solid grey;
@@ -238,7 +227,7 @@ nav ul li a.active, nav ul li a:hover{
           
         }
         #FooterSection{
-            position: fixed;
+            position: absolute;
             height: 80px;
             padding-bottom: 0;
         }
