@@ -49,7 +49,7 @@ function showPosition(position) {
         currentLocationMarker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            icon: "Project/Assets/MarIcon1.png",
+            icon: "/Project/Assets/MarIcon1.png",
             animation: google.maps.Animation.BOUNCE,
             title: "Your Position"
         });
