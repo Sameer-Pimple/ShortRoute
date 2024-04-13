@@ -439,7 +439,7 @@ nav ul li a {
         top: 85px;
         text-align: center;
         transition: all .5s;
-        z-index: 5;
+        z-index: 100;
     }
     nav ul li{
         display: block;
