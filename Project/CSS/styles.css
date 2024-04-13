@@ -433,7 +433,7 @@ nav ul li a {
         margin-left: 45%;
         width: 50%;
         align-items: center;
-        left: -100%;
+        left: 100%;
         background-color:rgba(255, 255, 255, 0.507); 
         backdrop-filter: blur(10px);
         top: 85px;
