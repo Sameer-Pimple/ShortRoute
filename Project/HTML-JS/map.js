@@ -1,6 +1,7 @@
 let directionsService, directionsRenderer, map;
 let currentLocationMarker, Circle;
-let input, autocomplete;// Declare a variable to hold the current location marker
+let input, autocomplete;
+let myLatLng;// Declare a variable to hold the current location marker
 
 function initMapAndAutocomplete() {
     initAutocomplete(),initMap();
@@ -38,7 +39,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    const myLatLng = { lat: position.coords.latitude, lng: position.coords.longitude };
+    myLatLng = { lat: position.coords.latitude, lng: position.coords.longitude };
 
     if (currentLocationMarker) {
         // If marker exists, update its position
@@ -70,8 +71,9 @@ function showPosition(position) {
 }
 
 function calculateAndDisplayRoute() {
-    const address1 = document.getElementById('address1').value;
-    const address2 = document.getElementById('address2').value;
+    const address0 = myLatLng
+    // const address1 = document.getElementById('address1').value
+    const address2 = document.getElementById('address2').value
     const address3 = document.getElementById('address3').value
     const address4 = document.getElementById('address4').value
 
@@ -82,7 +84,7 @@ function calculateAndDisplayRoute() {
     ];
 
     const request = {
-        origin: address1,
+        origin: address0,
         destination: address2, // Return to the starting point
         waypoints: waypoints,
         optimizeWaypoints: true,
