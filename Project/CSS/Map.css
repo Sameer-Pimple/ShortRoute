@@ -239,9 +239,6 @@ nav ul li a.active, nav ul li a:hover{
             transform: rotate(-225deg);
         }
 
-        #map{
-          
-        }
         #FooterSection{
             position: absolute;
             height: 80px;
