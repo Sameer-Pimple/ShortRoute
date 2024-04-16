@@ -122,6 +122,9 @@ nav ul li a.active, nav ul li a:hover{
     transition: all 0.5s;
 }
 
+.banner h4{
+    font-size: 30px;
+}
 
 
 .videoContainer .colorOverlay{
@@ -132,6 +135,59 @@ nav ul li a.active, nav ul li a:hover{
     top: 0;
     left: 0;
 }
+.welcometxt{
+    display: inline-flex;
+}
+.moving-text{
+    margin-left:15px ;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.glow{
+    
+    color: rgb(255, 5, 151);
+    text-shadow: 0 0 5px #6fc1ed,
+    0 0 10px #55b0f5;
+    /* text-shadow: 2px 2px rgba(0, 0, 255, 0.301); */
+    
+}
+.moving-text li{
+    list-style: none;
+    font-size: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    /* animation: move 100s steps(0) infinite; */
+}
+
+/* @keyframes move {
+    100%{
+        top: -360px;
+    }
+} */
+
+.moving-text li :after{
+    content: '';
+    position: absolute;
+
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    border-left: 2px solid;
+    animation: type 5s steps(21) infinite;
+}
+
+@keyframes type {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+    
+}
  
 /* *****Location form CSS*****/
 .LocForm{
@@ -139,6 +195,7 @@ nav ul li a.active, nav ul li a:hover{
     min-width: 35%;
     height: 71vh; 
     /* min-height: 60vh; */
+    clear: both;
     padding: 10px;
     margin: 30px auto;
     margin-left: 20px;
@@ -461,6 +518,17 @@ nav ul li a {
         height: 10%;
         z-index: 0;
         border-top:1px solid rgba(0, 0, 0, 0.082);
+    }
+
+    .moving-text li{
+        list-style: none;
+        font-size: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: 500;
+        position: relative;
+        top: 0;
+        /* animation: move 100s steps(0) infinite; */
     }
 }
 
