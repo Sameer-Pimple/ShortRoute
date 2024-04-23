@@ -22,9 +22,9 @@ header{
     position: absolute;
     /* background-color: rgb(158, 246, 246);  */
     height: 80px;
-    box-shadow: 0 0 5px 0 white; 
-    border-bottom: 1px solid rgba(4, 3, 3, 0.34);
-    z-index: 5;
+    /* box-shadow: 0 0 5px 0 white;  */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.452);
+    z-index: 100;
 }
 
 .Logo{
@@ -93,7 +93,6 @@ nav ul li a.active, nav ul li a:hover{
     /* position: absolute; */
     top: 0;
     left: 0;
-    
     z-index: -10;
 }
 
@@ -123,7 +122,11 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 .banner h4{
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #b4ebe8;
+    text-align: center;
 }
 
 
@@ -135,59 +138,51 @@ nav ul li a.active, nav ul li a:hover{
     top: 0;
     left: 0;
 }
-.welcometxt{
-    display: inline-flex;
-}
-.moving-text{
-    margin-left:15px ;
-    height: 90px;
-    line-height: 90px;
-    overflow: hidden;
-}
-.glow{
-    
-    color: rgb(255, 5, 151);
-    text-shadow: 0 0 5px #6fc1ed,
-    0 0 10px #55b0f5;
-    /* text-shadow: 2px 2px rgba(0, 0, 255, 0.301); */
-    
-}
-.moving-text li{
-    list-style: none;
-    font-size: 60px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-weight: 500;
-    position: relative;
-    top: 0;
-    /* animation: move 100s steps(0) infinite; */
-}
 
-/* @keyframes move {
-    100%{
-        top: -360px;
-    }
-} */
-
-.moving-text li :after{
-    content: '';
+.banner{
     position: absolute;
-
-    left: 0;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(5px);
-    border-left: 2px solid;
-    animation: type 5s steps(21) infinite;
+    z-index: 1;
 }
-
-@keyframes type {
-    100%{
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
+.banner .welcometxt{
+    display: flex;
+    font-size: 50px;
+    /* font-weight:500;    */
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
     
 }
+.banner .welcometxt .typing-text{
+    color: #1de2d1;
+    margin-right:10px;
+    text-shadow: 0 0 5px #b4ebe8, 0 0 10px rgb(115, 158, 175), 0 0 15px rgb(150, 195, 212);
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #1de2d1;
+    animation: typing 5s steps(11) infinite;
+    
+}
+@keyframes typing {
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 10ch;
+    }
+    100%{
+        width: 0ch;
+    }
+}
+.banner {
+    color: #fbf8f8;
+    text-shadow: 0 0 10px #ffffff;
+    text-align: center;
+}
+
+.banner button {
+    display: none;
+}
+
  
 /* *****Location form CSS*****/
 .LocForm{
@@ -559,7 +554,7 @@ nav ul li a {
         width: 50%;
         align-items: center;
         left: 100%;
-        background-color:rgba(255, 255, 255, 0.507); 
+        background-color:rgba(0, 0, 0, 0.252); 
         backdrop-filter: blur(10px);
         top: 85px;
         text-align: center;
@@ -582,7 +577,14 @@ nav ul li a {
     #check:checked~.checkbtn{
         transform: rotate(-225deg);
     }
-
+    
+    .banner .welcometxt{
+        font-size: 50px;
+        /* font-weight:500;    */
+        color: #ffffff;
+        text-shadow: 0 0 10px #ffffff;
+        display: block;
+    }
     /* Location form CSS*/
     .parent{
         display: flex;
