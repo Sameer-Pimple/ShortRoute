@@ -71,32 +71,41 @@ function showPosition(position) {
 }
 
 function calculateAndDisplayRoute() {
-    const address0 = myLatLng
-    // const address1 = document.getElementById('address1').value
-    const address2 = document.getElementById('address2').value
-    const address3 = document.getElementById('address3').value
-    const address4 = document.getElementById('address4').value
-
+    const origin = myLatLng;
+    const destination = document.getElementById('address2').value;
     const waypoints = [
-        { location: address2, stopover: true },
-        { location: address3, stopover: true },
-        { location: address4, stopover: true }
+        { location: document.getElementById('address3').value, stopover: true },
+        { location: document.getElementById('address4').value, stopover: true }
     ];
 
     const request = {
-        origin: address0,
-        destination: address2, // Return to the starting point
-        waypoints: waypoints,
+        origin,
+        destination,
+        waypoints,
         optimizeWaypoints: true,
-        travelMode: 'DRIVING'
+        avoidHighways: true,
+        travelMode: 'DRIVING',
+        unitSystem: google.maps.UnitSystem.METRIC, // Change to IMPERIAL for miles/feet
     };
 
     directionsService.route(request, function (result, status) {
         if (status === 'OK') {
+            // Render the directions
             directionsRenderer.setDirections(result);
+
+            // Extract and display distance information
+            const leg = result.routes[0].legs[0]; // First leg of the first route
+            const totalDistance = leg.distance.text; // Distance in user-friendly format
+            console.log("Total Distance:", totalDistance);
+
+            // Example: Show the distance in an HTML element
+            const distanceDisplay = document.getElementById('distanceDisplay');
+            distanceDisplay.innerText = `Total Distance: ${totalDistance}`;
+
         } else {
-            window.alert('Directions request failed due to ' + status);
+            console.error('Directions request failed due to ' + status);
         }
     });
 }
+
 window.initMap = initMap;

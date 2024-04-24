@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home || ShortRoute</title>
+    <title>ShortRoute</title>
+    <link rel="icon" type="image/png" href="/Project/Assets/TabLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
     <link rel="stylesheet" href="/Project/CSS/styles.css">
 </head>
@@ -77,16 +78,18 @@
                 <div class="controls">
                     <button class="add" onclick="add()">Add More</button>
                     <button class="remove" onclick="remove()">Remove</button>
+                    <div id="distanceDisplay" >Total Distance</div>
                 </div>
             </div>
         </div>
+       
         </section>
 
         <section >
             <!--Map navigation section-->
         <div id="map">
             <!-- We Have to Add Our API Key Here For Display Map -->
-            <input type="text" name="search" id="SearchLocation" placeholder="Search Location">
+            <!-- <input type="text" name="search" id="SearchLocation" placeholder="Search Location"> -->
         </div>
         </section>
 
