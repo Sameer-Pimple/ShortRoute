@@ -327,15 +327,15 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 #distanceDisplay{
+    display: flex;
     margin: 0 auto;
-    width: 200px;
+    width: 30%;
     text-align: center;
     justify-content: center;
     border-radius: 25px;
     padding: 8px 8px ;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     font-weight:500;
     transition: all .5s;
