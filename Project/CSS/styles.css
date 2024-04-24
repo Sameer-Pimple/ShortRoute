@@ -176,6 +176,7 @@ nav ul li a.active, nav ul li a:hover{
 .banner {
     color: #fbf8f8;
     text-shadow: 0 0 10px #ffffff;
+    box-shadow: 0px 0px 50px 0px rgb(25, 21, 21);
     text-align: center;
 }
 
@@ -340,7 +341,7 @@ nav ul li a.active, nav ul li a:hover{
     height: 10%;
     z-index: 0;
     border-top:1px solid rgba(0, 0, 0, 0.082);
-    background-color: #624763;
+    background-color: #9cebf9;
 }
 
 .social{
