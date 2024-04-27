@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/Project/Assets/TabLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
     <link rel="stylesheet" href="/Project/CSS/FeedBack.css">
-    <title>FeedBack || ShortRoute</title>
+    <title>ShortRoute</title>
 </head>
 <body>
     <div class="container">
@@ -30,7 +31,18 @@
             </header>
         </div>
 
-        <section >
+        <section>
+            <div class="Feedcontainer">
+                <form onsubmit="sendEmail(); reset(); return false;console.log()">
+                    <h3>Get in touch</h3>
+                    <input type="text" id="name" placeholder="Your Name" required >
+                    <input type="email" id="email" placeholder="Email id" required >
+                    <input type="text" id="phone" placeholder="Phone No." required >
+                    <textarea id="message"  rows="4" placeholder="How Can We Help You ?"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
             <!--Map navigation section-->
         
 
@@ -54,6 +66,24 @@
 
     </div>
 
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "unitedstates.of.smash.oneforall@gmail.com",
+    Password : "ShortRoute@2002",
+    To : 'unitedstates.of.smash.oneforall@gmail.com',
+    From : document.getElementById("Email").value,
+    Subject : "New Contact From Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " +  document.getElementById("email").value
+            + "<br> Phone No.: " +  document.getElementById("phone").value
+            + "<br> Massage: " +  document.getElementById("massage").value
+}).then(
+  message => alert(message)
+);
+    }
+    </script>
 </body>
 </html>
