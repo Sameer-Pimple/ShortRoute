@@ -287,7 +287,9 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 @media(max-width: 840px){
-    
+    .container{
+        height: 100%;
+    }
     nav ul li a {
             margin-right: 0px;
             font-size: 14px;
@@ -296,10 +298,11 @@ nav ul li a.active, nav ul li a:hover{
 
 
         #FooterSection{
-            position: absolute;
+            position: relative;
             left: 0;
             right: 0;
-            bottom:-70px;
+            bottom:0;
+            padding: 8px;
             width: 100%;
             margin: 0 auto;
             height: 10%;
