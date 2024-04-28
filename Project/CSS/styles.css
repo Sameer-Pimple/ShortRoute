@@ -6,6 +6,12 @@
     font-family: "Poppins", sans-serif;
     
 }
+
+/*for making scrolling effect soother throught the web page*/
+html {
+    scroll-behavior: smooth;
+  }
+
 .container{
     /* background-image:url(/Project/Assets/sattlite.jpg); */
     height: 100vh;
@@ -66,6 +72,7 @@ nav ul li a {
 
 nav ul li a.active, nav ul li a:hover{
     border-bottom: 2px solid rgb(247, 190, 85);
+    color: #63f9d8;
     padding-bottom: 5px;
     border-radius: 80%;
     transition: 0.3s;
@@ -178,8 +185,22 @@ nav ul li a.active, nav ul li a:hover{
     }
 }
 
-.banner button {
-    display: none;
+.banner button  {
+    height: 80px;
+    mix-blend-mode:multiply;
+    background-color:transparent;
+    border: none;
+    box-shadow: none;
+    transition: all .5s;
+}
+
+.banner button a img{
+    height: 80px;
+    border: none;
+    filter: brightness(100);
+    /* background-color: #1de2d1; */
+    color: #ffffff;
+  
 }
 
  
@@ -342,7 +363,7 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 
-/* This is the footer section */
+/* ***This is the footer section*** */
  #FooterSection{
     position: absolute;
     top: 190vh;
@@ -377,6 +398,7 @@ nav ul li a.active, nav ul li a:hover{
     font-size: 14px;
     color: white;
     padding: 5px;
+    transition: all .5s;
 }
 
 .social ul li a i:hover{

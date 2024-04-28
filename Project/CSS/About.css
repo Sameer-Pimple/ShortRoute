@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500..900&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -89,11 +90,12 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 .wrapper h1{
-    font-family: "Poppins", sans-serif;
+    color: rgb(13, 109, 144);
+    font-family: "Cinzel", serif;
+    font-weight: 500;
     font-size: 45px;
     margin-bottom: 5%;
     text-align: center;
-    color: rgb(0, 255, 255);
 }
 
 .wrapper .devlopers{
@@ -111,6 +113,7 @@ nav ul li a.active, nav ul li a:hover{
     margin-bottom: 50px;
     width: 400px;
     padding: 20px;
+    border-radius: 10px;
     line-height: 20px;
     color: #253e1c;
     position: relative;
@@ -147,7 +150,6 @@ nav ul li a.active, nav ul li a:hover{
     width: 100px;
     border: 10px solid rgb(174, 217, 226);
     border-radius: 50%;
-    /* padding: 10px; */
 }
 
 .devloper .contact{
@@ -158,6 +160,7 @@ nav ul li a.active, nav ul li a:hover{
     bottom: 0;
     right: 0;
     left: 0;
+    margin-bottom: 25px;
     border-radius: 25px;
     position: relative;
     text-align: center;
@@ -216,10 +219,11 @@ nav ul li a.active, nav ul li a:hover{
     font-size: 14px;
     color: white;
     padding: 5px;
+    transition: all .5s;
 }
 
 .social ul li a i:hover{
-    color:#A1E887;
+    color:blue;
 }
 
 .bottomBar{
@@ -290,9 +294,6 @@ nav ul li a.active, nav ul li a:hover{
             transition: all 0.5s;
         }
 
-        .wrapper .devlopers{
-            
-            }
 
         #FooterSection{
             position: absolute;

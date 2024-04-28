@@ -118,10 +118,11 @@ nav ul li a.active, nav ul li a:hover{
     font-size: 14px;
     color: white;
     padding: 5px;
+    transition: all .3s;
 }
 
 .social ul li a i:hover{
-    color:#A1E887;
+    color:blue;
 }
 
 .bottomBar{
