@@ -86,7 +86,7 @@ nav ul li a.active, nav ul li a:hover{
 
  /*body section css*/
 .wrapper{
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 .wrapper h1{
@@ -103,6 +103,8 @@ nav ul li a.active, nav ul li a:hover{
     margin: 80px 0px;
     text-align: center;
     width: auto;
+    align-items: center;
+    align-content: center;
     justify-content: center;
     flex-wrap: wrap;
 }
