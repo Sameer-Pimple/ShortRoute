@@ -107,16 +107,17 @@ nav ul li a.active, nav ul li a:hover{
 
 .ContactContainer .wrapper h1{
     position: absolute;
-    top: 5px;
+    top: 2%;
     font-family: 'Cinzel',serif;
+    font-weight: 700;
     color: rgb(13, 109, 144);
     text-transform: uppercase;
 } 
 
 .ContactContainer .wrapper h3{
-    position: ;
-    top: 5px;
-    font-family: 'Cinzel',serif;
+
+    /* font-family: 'Cinzel',serif; */
+    font-weight: 500;
     color: rgb(13, 109, 144);
     text-transform: uppercase;
 } 
@@ -145,6 +146,10 @@ nav ul li a.active, nav ul li a:hover{
     text-decoration: none;
     letter-spacing: 1.5px;
     color: rgb(57, 22, 43);
+}
+
+.contacts ul li a:hover{
+    color: gray;
 }
 
 /* This is the footer section */
