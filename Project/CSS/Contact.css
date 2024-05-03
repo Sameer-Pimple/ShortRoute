@@ -110,7 +110,7 @@ nav ul li a.active, nav ul li a:hover{
     top: 2%;
     font-family: 'Cinzel',serif;
     font-weight: 700;
-    color: rgb(13, 109, 144);
+    color: #0d6d90;
     text-transform: uppercase;
 } 
 
@@ -137,15 +137,19 @@ nav ul li a.active, nav ul li a:hover{
 
 .contacts ul li{
     list-style: none;
-    padding: 5px;
+    padding: 5px 0;
     margin: 20px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.319);
+    
 }
 
 .contacts ul li a{
     text-decoration: none;
-    letter-spacing: 1.5px;
-    color: rgb(57, 22, 43);
+    border-radius: 5px;
+    padding: 3px 5px;
+    letter-spacing: 2px;
+   background-color: hwb(212 17% 24% / 0);
+    color: #0d6d90;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.533) ;
 }
 
 .contacts ul li a:hover{
