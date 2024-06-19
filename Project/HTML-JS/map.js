@@ -40,7 +40,7 @@ function getLocation() {
 
 function showPosition(position) {
     myLatLng = { lat: position.coords.latitude, lng: position.coords.longitude };
-
+    console.log(myLatLng);
     if (currentLocationMarker) {
         // If marker exists, update its position
         currentLocationMarker.setPosition(myLatLng);
