@@ -72,8 +72,9 @@ function showPosition(position) {
 
 function calculateAndDisplayRoute() {
     const origin = myLatLng;
-    const destination = document.getElementById('address2').value;
+    const destination = document.getElementById('address1').value;
     const waypoints = [
+        { location: document.getElementById('address2').value, stopover: true },
         { location: document.getElementById('address3').value, stopover: true },
         { location: document.getElementById('address4').value, stopover: true }
     ];
