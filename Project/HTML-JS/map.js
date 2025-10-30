@@ -5,7 +5,7 @@ let myLatLng;// Declare a variable to hold the current location marker
 
 function initMapAndAutocomplete() {
     initAutocomplete(),initMap();
-  }
+}
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
