@@ -1,4 +1,4 @@
-![ShortRoute Logo](Project/Assets/logo.png)
+![ShortRoute Logo](Assets/logo.png)
 
 # SHORTR0UTE
 
@@ -42,37 +42,37 @@ This project empowers developers to embed advanced location-based functionalitie
 - 🗺️ **Interactive Map & Routing:** Visualize routes, calculate distances, and manage waypoints with live updates.
 
 
-  ![ShortRoute Logo](Project/Assets/Homepage.png)
-  ![ShortRoute Logo](Project/Assets/Map.png)
+  ![ShortRoute Logo](Assets/Homepage.png)
+  ![ShortRoute Logo](Assets/Map.png)
 
 ---
   
 - 🧭 **Dynamic Location Inputs:** Add or remove multiple addresses with autocomplete support for seamless data entry.
 
   
-  ![ShortRoute Logo](Project/Assets/Form.png)
+  ![ShortRoute Logo](Assets/Form.png)
 
 ---
   
 - 📍 **Geolocation & Navigation:** Detect user location and provide smart navigation experiences.
 
   
-  ![ShortRoute Logo](Project/Assets/Result.png)
+  ![ShortRoute Logo](Assets/Result.png)
 
 ---
   
 - 🧾 **Address Data Handling:** Capture and process user-submitted addresses for validation and storage.
 
   
-  ![ShortRoute Logo](Project/Assets/Map.png)
+  ![ShortRoute Logo](Assets/Map.png)
 
 ---
   
 - 💬 **User Engagement:** Gather feedback through integrated web forms to enhance communication.
 
   
-  ![ShortRoute Logo](Project/Assets/Feedback.png)
-  ![ShortRoute Logo](Project/Assets/About.png)
+  ![ShortRoute Logo](Assets/Feedback.png)
+  ![ShortRoute Logo](Assets/About.png)
 
 ---
 
